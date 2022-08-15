@@ -27,14 +27,30 @@ for (const card of allCards) {
 
 // ৬. এইবার নতুন করে সবগুলা buy now বাটনে এমন একটা ইভেন্ট হ্যান্ডলার যোগ করো। যাতে যেকোন একটা buy now বাটনে চাপ দিলে সেটা ওয়েবসাইট থেকে রিমুভ হয়ে যায়। একটু চিন্তা করে করার চেষ্টা করো।
 
+const pandaBtnBuyNowAll = document.getElementsByClassName("panda-btn-buy-now");
+for (const pandaBtnBuyNow of pandaBtnBuyNowAll) {
+  pandaBtnBuyNow.addEventListener("click", function (event) {
+    // console.log("panda-btn-buy-now");
+    document
+      .getElementById("main-section")
+      .addEventListener("click", function (event) {
+        // finding the parentNode of the clicked button
+        // console.log(event.target.parentNode.parentNode.parentNode);
+        // method to remove the element
+        event.target.parentNode.parentNode.parentNode.remove();
+      });
+  });
+}
+/* 
+// successfully removed the element from the DOM 
 document
   .getElementById("main-section")
   .addEventListener("click", function (event) {
     // finding the parentNode of the clicked button
     // console.log(event.target.parentNode.parentNode.parentNode);
-    // 1st method to remove the element
-    event.target.parentNode.parentNode.parentNode.remove();
-  });
+    /* // 1st method to remove the element
+    event.target.parentNode.parentNode.parentNode.remove(); */
+// }); */
 /* 
 document
   .getElementById("main-section")
