@@ -117,6 +117,22 @@ letsStayInTouch.addEventListener("keyup", function (event) {
 const img = document.getElementsByTagName("img");
 // console.log(img);
 for (const imgElement of img) {
+  // imgElement.addEventListener("mouseenter", function (event) {
+  imgElement.addEventListener("mouseenter", function (event) {
+    console.log(event.target.src);
+    const src = imgElement.getAttribute("src");
+    console.log(src);
+    if (event) {
+      imgElement.setAttribute("src", "https://picsum.photos/200/300");
+    } else {
+      imgElement.setAttribute("src", src);
+      // console.log(event.target.src);
+    }
+  });
+}
+/* const img = document.getElementsByTagName("img");
+// console.log(img);
+for (const imgElement of img) {
   imgElement.addEventListener("mouseenter", function (event) {
     // console.log(event.target.src);
     // if (event) {
@@ -125,8 +141,8 @@ for (const imgElement of img) {
     /*     else {
       imgElement.removeAttribute("src");
     } */
-  });
-}
+//});
+//} */
 // ৯. (অপশনাল) নিচের যে LET'S STAY IN TOUCH আছে সেখানে কোন খালি জায়গায় ডাবল ক্লিক করলে ঐটার পিছনের কালার চেইঞ্জ হয়ে যাবে।
 
 function random_bg_color() {
