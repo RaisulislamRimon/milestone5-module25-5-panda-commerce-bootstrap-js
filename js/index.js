@@ -102,6 +102,17 @@ document
 
 // ৭. একদম নিচে একটা LET'S STAY IN TOUCH নামে একটা জিনিস আছে। সেখানে তুমি submit বাটনটা disable করে ফেলবে। তারপর কেউ যদি উপরে input ফিল্ডে যদি একজাক্টলি email শব্দটা লিখে। তাহলে বাটন একটিভ হবে। আর যদি অন্য কিছু লিখে তাহলে বাটনটা একটিভ হবে না।
 
+const letsStayInTouch = document.getElementById("exampleInputEmail1");
+const subscribeBtn = document.getElementById("subscribe-btn");
+letsStayInTouch.addEventListener("keyup", function (event) {
+  console.log(event.target.value);
+  if (event.target.value === "email") {
+    subscribeBtn.removeAttribute("disabled");
+  } else {
+    subscribeBtn.setAttribute("disabled", true);
+  }
+});
+
 // ৮. (অপশনাল) একটা মজার চ্যালেঞ্জ। কোন একটা ইমেজ এর উপরে mouseenter করলে সেই ইমেজটা চেইঞ্জ হয়ে যাবে। একটু গুগলে সার্চ দিয়ে দেখো। জিনিসটা কিভাবে করা যেতে পারে।
 
 // ৯. (অপশনাল) নিচের যে LET'S STAY IN TOUCH আছে সেখানে কোন খালি জায়গায় ডাবল ক্লিক করলে ঐটার পিছনের কালার চেইঞ্জ হয়ে যাবে।
