@@ -416,7 +416,7 @@
         <div>
           <h2>LET'S STAY IN TOUCH</h2>
           <p>Get updates on sales, specials & more</p>
-          <form>
+          <form onsubmit="return false">
             <div class="mb-1">
               <input
                 type="email"
@@ -425,7 +425,13 @@
                 aria-describedby="emailHelp"
               />
             </div>
-            <button type="submit" class="btn panda-btn-buy-now">Submit</button>
+            <button
+              onclick="showResult()"
+              type=""
+              class="btn panda-btn-buy-now"
+            >
+              Submit
+            </button>
           </form>
         </div>
       </section>
