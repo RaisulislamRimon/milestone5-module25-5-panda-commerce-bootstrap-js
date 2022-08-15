@@ -119,15 +119,11 @@ const img = document.getElementsByTagName("img");
 for (const imgElement of img) {
   // imgElement.addEventListener("mouseenter", function (event) {
   imgElement.addEventListener("mouseenter", function (event) {
-    console.log(event.target.src);
+    // console.log(event.target.src);
     const src = imgElement.getAttribute("src");
     console.log(src);
-    if (event) {
-      imgElement.setAttribute("src", "https://picsum.photos/200/300");
-    } else {
-      imgElement.setAttribute("src", src);
-      // console.log(event.target.src);
-    }
+
+    imgElement.setAttribute("src", "https://picsum.photos/200/300");
   });
 }
 /* const img = document.getElementsByTagName("img");
