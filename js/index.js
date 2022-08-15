@@ -31,8 +31,7 @@ function showResult() {
 // ৬. এইবার নতুন করে সবগুলা buy now বাটনে এমন একটা ইভেন্ট হ্যান্ডলার যোগ করো। যাতে যেকোন একটা buy now বাটনে চাপ দিলে সেটা ওয়েবসাইট থেকে রিমুভ হয়ে যায়। একটু চিন্তা করে করার চেষ্টা করো।
 
 const pandaBtnBuyNowAll = document.getElementsByClassName("btn-remove");
-console.log(pandaBtnBuyNowAll);
-
+// console.log(pandaBtnBuyNowAll);
 for (const pandaBtnBuyNow of pandaBtnBuyNowAll) {
   pandaBtnBuyNow.addEventListener("click", function () {
     // alert("Thank you for buying Panda!");
@@ -115,4 +114,17 @@ letsStayInTouch.addEventListener("keyup", function (event) {
 
 // ৮. (অপশনাল) একটা মজার চ্যালেঞ্জ। কোন একটা ইমেজ এর উপরে mouseenter করলে সেই ইমেজটা চেইঞ্জ হয়ে যাবে। একটু গুগলে সার্চ দিয়ে দেখো। জিনিসটা কিভাবে করা যেতে পারে।
 
+const img = document.getElementsByTagName("img");
+// console.log(img);
+for (const imgElement of img) {
+  imgElement.addEventListener("mouseenter", function (event) {
+    // console.log(event.target.src);
+    // if (event) {
+    imgElement.setAttribute("src", "https://picsum.photos/200/300");
+    // }
+    /*     else {
+      imgElement.removeAttribute("src");
+    } */
+  });
+}
 // ৯. (অপশনাল) নিচের যে LET'S STAY IN TOUCH আছে সেখানে কোন খালি জায়গায় ডাবল ক্লিক করলে ঐটার পিছনের কালার চেইঞ্জ হয়ে যাবে।
