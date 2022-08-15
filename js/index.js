@@ -27,9 +27,29 @@ for (const card of allCards) {
 
 // ৬. এইবার নতুন করে সবগুলা buy now বাটনে এমন একটা ইভেন্ট হ্যান্ডলার যোগ করো। যাতে যেকোন একটা buy now বাটনে চাপ দিলে সেটা ওয়েবসাইট থেকে রিমুভ হয়ে যায়। একটু চিন্তা করে করার চেষ্টা করো।
 
-const pandaBtnBuyNowAll = document.getElementsByClassName("panda-btn-buy-now");
+const pandaBtnBuyNowAll = document.getElementsByClassName("btn-remove");
+console.log(pandaBtnBuyNowAll);
+
 for (const pandaBtnBuyNow of pandaBtnBuyNowAll) {
-  pandaBtnBuyNow.addEventListener("click", function (event) {
+  pandaBtnBuyNow.addEventListener("click", function () {
+    // alert("Thank you for buying Panda!");
+    // pandaBtnBuyNow.innerHTML = "Thank you for buying Panda!";
+    // pandaBtnBuyNow.parentElement.innerHTML = "Thank you for buying Panda!";
+    pandaBtnBuyNow.parentNode.parentNode.parentNode.remove();
+  });
+}
+
+/* 
+const pandaBtnBuyNowAll = document.getElementsByClassName("panda-btn-buy-now");
+
+// console.log(pandaBtnBuyNowAll);
+
+for (const pandaBtnBuyNow of pandaBtnBuyNowAll) {
+  console.log(pandaBtnBuyNow.innerText);
+  /* if (pandaBtnBuyNow.innerHTML === "Buy Now\n") {
+    console.log("Buy Now");
+  } */
+/*   pandaBtnBuyNow.addEventListener("click", function (event) {
     // console.log("panda-btn-buy-now");
     document
       .getElementById("main-section")
@@ -39,8 +59,8 @@ for (const pandaBtnBuyNow of pandaBtnBuyNowAll) {
         // method to remove the element
         event.target.parentNode.parentNode.parentNode.remove();
       });
-  });
-}
+  }); */
+// } */
 /* 
 // successfully removed the element from the DOM 
 document
