@@ -128,3 +128,20 @@ for (const imgElement of img) {
   });
 }
 // ৯. (অপশনাল) নিচের যে LET'S STAY IN TOUCH আছে সেখানে কোন খালি জায়গায় ডাবল ক্লিক করলে ঐটার পিছনের কালার চেইঞ্জ হয়ে যাবে।
+
+function random_bg_color() {
+  var x = Math.floor(Math.random() * 256);
+  var y = Math.floor(Math.random() * 256);
+  var z = Math.floor(Math.random() * 256);
+  var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+  return bgColor;
+  // console.log(bgColor);
+
+  // document.body.style.background = bgColor;
+}
+
+document.getElementById("subscribe").addEventListener("dblclick", function () {
+  // document.getElementById("subscribe").style.backgroundColor = "red";
+  document.getElementById("subscribe").style.backgroundColor =
+    random_bg_color();
+});
