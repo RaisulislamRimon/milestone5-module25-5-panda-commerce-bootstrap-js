@@ -10,3 +10,11 @@ for (const h2Tag of allH2Tags) {
 
 const backpack = document.getElementById("backpack");
 backpack.style.backgroundColor = "tomato";
+
+// ৪. card ক্লাস যতগুলা জায়গায় ইউজ করা হয়েছে সবগুলা কার্ড এর বর্ডার রেডিয়াস ৩০px করে দিতে পারো কিনা
+
+const allCards = document.getElementsByClassName("card");
+
+for (const card of allCards) {
+  card.style.borderRadius = "30px";
+}
