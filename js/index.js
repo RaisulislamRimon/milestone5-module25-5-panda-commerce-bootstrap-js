@@ -32,7 +32,8 @@ document
   .addEventListener("click", function (event) {
     // finding the parentNode of the clicked button
     // console.log(event.target.parentNode.parentNode.parentNode);
-    
+    // 1st method to remove the element
+    event.target.parentNode.parentNode.parentNode.remove();
   });
 /* 
 document
