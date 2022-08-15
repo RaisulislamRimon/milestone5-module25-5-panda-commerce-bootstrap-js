@@ -5,3 +5,8 @@ const allH2Tags = document.getElementsByTagName("h2");
 for (const h2Tag of allH2Tags) {
   h2Tag.style.color = "lightblue";
 }
+
+// ৩. ওই ওয়েবসাইট এ backpack আইডি দিয়ে একটা সেকশন আছে। সেই সেকশনের ব্যাকগ্রাউন্ড কালার tomato করে দিতে পারো কিনা।
+
+const backpack = document.getElementById("backpack");
+backpack.style.backgroundColor = "tomato";
